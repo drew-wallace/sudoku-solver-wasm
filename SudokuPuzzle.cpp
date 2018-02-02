@@ -321,7 +321,7 @@ void SudokuPuzzle::setCellLoop()
 					}
 					for (int d = 1; d < 10; d++)
 					{
-						if (grid[r][c][d] != tmp[grid[r][c][d] - 1] && grid[r][c][d] != 0) //if a possible value of the cell is unique to the zone, then set the cell to that value
+						if (grid[r][c][d] != 0 && grid[r][c][d] != tmp[grid[r][c][d] - 1]) //if a possible value of the cell is unique to the zone, then set the cell to that value
 						{
 							grid[r][c][0] = grid[r][c][d];
 							//cout << "zone unique: " << grid[r][c][d] << " at " << r << " " << c << endl;
@@ -349,7 +349,7 @@ void SudokuPuzzle::setCellLoop()
 					}
 					for (int d = 1; d < 10; d++)
 					{
-						if (grid[r][c][d] != tmp[grid[r][c][d] - 1] && grid[r][c][d] != 0) //if a possible value of the cell is unique to the row, then set the cell to that value
+						if (grid[r][c][d] != 0 && grid[r][c][d] != tmp[grid[r][c][d] - 1]) //if a possible value of the cell is unique to the row, then set the cell to that value
 						{
 							grid[r][c][0] = grid[r][c][d];
 							//cout << "row unique: " << grid[r][c][d] << " at " << r << " " << c << endl;
@@ -377,7 +377,7 @@ void SudokuPuzzle::setCellLoop()
 					}
 					for (int d = 1; d < 10; d++)
 					{
-						if (grid[r][c][d] != tmp[grid[r][c][d] - 1] && grid[r][c][d] != 0) //if a possible value of the cell is unique to the column, then set the cell to that value
+						if (grid[r][c][d] != 0 && grid[r][c][d] != tmp[grid[r][c][d] - 1]) //if a possible value of the cell is unique to the column, then set the cell to that value
 						{
 							grid[r][c][0] = grid[r][c][d];
 							//cout << "column unique: " << grid[r][c][d] << " at " << r << " " << c << endl;
